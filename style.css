@@ -1,0 +1,296 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translate(0, -1vw);
+            transform: translate(0, -1vw);
+  }
+  100% {
+    -webkit-transform: translate(0, 1vw);
+            transform: translate(0, 1vw);
+  }
+}
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translate(0, -1vw);
+            transform: translate(0, -1vw);
+  }
+  100% {
+    -webkit-transform: translate(0, 1vw);
+            transform: translate(0, 1vw);
+  }
+}
+
+body {
+  width: 100%;
+  background-color: #FFF8F8;
+}
+
+.container, .what-we-do, .partership, .pricing {
+  overflow: hidden;
+  width: 100%;
+}
+
+.navbar-container {
+  width: 100%;
+  height: 5vw;
+  padding: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background: white;
+  font-weight: bold;
+}
+
+.navbar-container .logo {
+  font-size: 2vw;
+  color: #EC615B;
+}
+
+.navbar-container .logo span {
+  color: #5222D0;
+}
+
+.navbar-container ul {
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.navbar-container ul li {
+  color: #5222D0;
+  font-size: 1.5vw;
+}
+
+.navbar-container ul li a:visited {
+  color: #5222D0;
+}
+
+.navbar-container ul li a:hover {
+  color: #cac2dd;
+}
+
+.hero-image {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
+}
+
+.hero-image .text {
+  font-size: 4vw;
+  line-height: 6vw;
+  padding: 10vw 5vw;
+  -webkit-animation: floating 2s cubic-bezier(0, 0, 0, 0) infinite alternate;
+          animation: floating 2s cubic-bezier(0, 0, 0, 0) infinite alternate;
+}
+
+.hero-image .text h1 {
+  color: #EC615B;
+}
+
+.hero-image .text h2 {
+  color: #5222D0;
+}
+
+.hero-image img {
+  width: 100%;
+}
+
+.what-we-do {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+  -ms-grid-rows: 45vw 20vw;
+      grid-template-rows: 45vw 20vw;
+}
+
+.what-we-do .red-bubble, .what-we-do .blue-bubble {
+  position: relative;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  color: white;
+  font-weight: bolder;
+  font-style: italic;
+  font-size: 3vw;
+}
+
+.what-we-do .red-bubble {
+  background-image: url(Assets/Path244.svg);
+  -webkit-transform: translate(-10vw, 0);
+          transform: translate(-10vw, 0);
+  padding-top: 20vw;
+  padding-left: 12.5vw;
+}
+
+.what-we-do .blue-bubble {
+  background-image: url(Assets/Path245.svg);
+  -webkit-transform: translate(15vw, 0);
+          transform: translate(15vw, 0);
+  text-align: right;
+  padding-top: 15vw;
+  padding-right: 17.5vw;
+}
+
+.partnership {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+.partnership img {
+  width: 100%;
+}
+
+.partnership .partnership-text {
+  -webkit-animation: floating 2s cubic-bezier(0, 0, 0, 0) infinite alternate;
+          animation: floating 2s cubic-bezier(0, 0, 0, 0) infinite alternate;
+}
+
+.partnership .partnership-text h1 {
+  color: #EC615B;
+  font-weight: bold;
+  font-size: 7.5vw;
+}
+
+.partnership .partnership-text h2 {
+  color: #5222D0;
+  font-weight: bold;
+  font-size: 2vw;
+}
+
+.pricing {
+  position: relative;
+  height: 50vw;
+}
+
+.pricing .card-blue, .pricing .card-red {
+  position: absolute;
+  display: inline-block;
+  width: 20vw;
+  height: 25vw;
+  border-radius: 10%;
+  bottom: 25%;
+  background-color: white;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 2vw black;
+          box-shadow: 0 0 2vw black;
+  z-index: 1;
+}
+
+.pricing .card-blue .top, .pricing .card-red .top {
+  padding: 2.5vw;
+  color: white;
+  font-size: 2.5vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pricing .card-blue .top span, .pricing .card-red .top span {
+  font-size: 1vw;
+}
+
+.pricing .card-blue .middle, .pricing .card-red .middle {
+  background-color: white;
+  padding: 2.5vw 3vw;
+  color: #707070;
+  font-size: 1.5vw;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.pricing .card-blue .middle ul li, .pricing .card-red .middle ul li {
+  list-style-type: disc;
+}
+
+.pricing .card-blue .bottom, .pricing .card-red .bottom {
+  padding: .5vw;
+  background-color: #5222D0;
+  color: white;
+  font-size: 2.5vw;
+  font-weight: bold;
+  text-align: center;
+}
+
+.pricing .card-blue .bottom a:visited, .pricing .card-red .bottom a:visited {
+  color: white;
+}
+
+.pricing .card-blue .bottom:hover, .pricing .card-red .bottom:hover {
+  background-color: #cac2dd;
+}
+
+.pricing .card-blue {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  left: 25%;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 30% 50% auto;
+      grid-template-rows: 30% 50% auto;
+  -webkit-animation: floating 2s cubic-bezier(0, 0, 0, 0) infinite alternate;
+          animation: floating 2s cubic-bezier(0, 0, 0, 0) infinite alternate;
+}
+
+.pricing .card-blue .top {
+  background-color: #5222D0;
+}
+
+.pricing .card-blue .bottom {
+  background-color: #5222D0;
+}
+
+.pricing .card-red {
+  display: -ms-grid;
+  display: grid;
+  position: absolute;
+  right: 25%;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 30% 50% auto;
+      grid-template-rows: 30% 50% auto;
+  -webkit-animation: floating 2s 1s cubic-bezier(0, 0, 0, 0) infinite alternate;
+          animation: floating 2s 1s cubic-bezier(0, 0, 0, 0) infinite alternate;
+}
+
+.pricing .card-red .top {
+  background-color: #EC615B;
+}
+
+.pricing .card-red .bottom {
+  background-color: #EC615B;
+}
+
+.pricing img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+/*# sourceMappingURL=style.css.map */
